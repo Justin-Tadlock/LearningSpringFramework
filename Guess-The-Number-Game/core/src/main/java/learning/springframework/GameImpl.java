@@ -3,6 +3,9 @@ package learning.springframework;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class GameImpl implements Game {
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
@@ -17,11 +20,8 @@ public class GameImpl implements Game {
                 remainingGuesses;
     private boolean validNumberRange = true;
 
-    // == Public Methods ==
-    public void setNumberGenerator(NumberGenerator numberGenerator) {
-        this.numberGenerator = numberGenerator;
-    }
-
+    // == Init ==
+    @PostConstruct
     @Override
     public void reset() {
         smallest = 0;
@@ -31,6 +31,16 @@ public class GameImpl implements Game {
         remainingGuesses = guessCount;
         validNumberRange = true;
         log.debug("The number is {}", number);
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        log.info("in Game preDestroy");
+    }
+
+    // == Public Methods ==
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
     }
 
     @Override
