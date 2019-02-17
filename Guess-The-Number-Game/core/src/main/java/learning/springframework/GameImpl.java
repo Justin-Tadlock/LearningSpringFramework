@@ -17,11 +17,9 @@ public class GameImpl implements Game {
                 remainingGuesses;
     private boolean validNumberRange = true;
 
-    // == Constructors ==
-    public GameImpl(NumberGenerator numberGenerator) {
+    // == Public Methods ==
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
         this.numberGenerator = numberGenerator;
-
-        reset();
     }
 
     @Override

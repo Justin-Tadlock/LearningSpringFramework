@@ -7,7 +7,7 @@
     <bean id="numberGenerator" class="learning.springframework.NumberGeneratorImpl"/>
 
     <bean id="game" class="learning.springframework.GameImpl">
-        <constructor-arg ref="numberGenerator" />
+        <property name="numberGenerator" ref="numberGenerator" />
     </bean>
 
 </beans>
