@@ -1,9 +1,13 @@
-package learning.springframework;
+package learning.springframework.console;
 
+import learning.springframework.AppConfig;
+import learning.springframework.MessageGenerator;
+import learning.springframework.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
