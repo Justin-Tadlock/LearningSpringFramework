@@ -1,6 +1,6 @@
 package learning.springframework.console;
 
-import learning.springframework.AppConfig;
+import learning.springframework.config.AppConfig;
 import learning.springframework.MessageGenerator;
 import learning.springframework.NumberGenerator;
 import org.slf4j.Logger;
