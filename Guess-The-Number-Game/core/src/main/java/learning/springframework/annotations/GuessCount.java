@@ -1,4 +1,4 @@
-package learning.springframework;
+package learning.springframework.annotations;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Qualifier
-public @interface MaxNumber {
+public @interface GuessCount {
 
 }

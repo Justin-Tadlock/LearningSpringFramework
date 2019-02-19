@@ -1,17 +1,33 @@
 package learning.springframework.config;
 
-import learning.springframework.GuessCount;
-import learning.springframework.MaxNumber;
+import learning.springframework.annotations.GuessCount;
+import learning.springframework.annotations.MinNumber;
+import learning.springframework.annotations.MaxNumber;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
     // == fields ==
-    private int maxNumber = 100;
-    private int guessCount = 10;
+    @Value("${game.minNumber:0}") // defaulting to 0 if the game.properties cannot be loaded
+    private int minNumber;
+
+    @Value("${game.maxNumber:50}") // defaulting to 50 if game.properties cannot be loaded
+    private int maxNumber;
+
+    @Value("${game.guessCount:10}") // defaulting to 10 if game.properties cannot be loaded
+    private int guessCount;
 
     // == bean methods ==
+    @Bean
+    @MinNumber
+    public int minNumber() {
+        return minNumber;
+    }
+
     @Bean
     @MaxNumber
     public int maxNumber() {

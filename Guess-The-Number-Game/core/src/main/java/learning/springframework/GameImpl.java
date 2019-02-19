@@ -1,5 +1,6 @@
 package learning.springframework;
 
+import learning.springframework.annotations.GuessCount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class GameImpl implements Game {
     @PostConstruct
     @Override
     public void reset() {
-        smallest = 0;
+        smallest = numberGenerator.getMinNumber();
         guess = 0;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
