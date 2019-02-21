@@ -4,16 +4,18 @@ import learning.springframework.annotations.GuessCount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Component
 public class GameImpl implements Game {
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // Fields
     @Autowired
-    private NumberGenerator numberGenerator;
+    private final NumberGenerator numberGenerator;
 
     @Autowired
     @GuessCount
@@ -24,6 +26,11 @@ public class GameImpl implements Game {
                 biggest,
                 remainingGuesses;
     private boolean validNumberRange = true;
+
+    @Autowired
+    public GameImpl(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
+    }
 
     // == Init ==
     @PostConstruct
