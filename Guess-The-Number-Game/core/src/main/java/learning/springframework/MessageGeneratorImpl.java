@@ -11,7 +11,6 @@ import javax.annotation.PostConstruct;
 public class MessageGeneratorImpl implements MessageGenerator {
     private static final Logger log = LoggerFactory.getLogger(MessageGenerator.class);
 
-    @Autowired
     private final Game game;
 
     @Autowired

@@ -1,8 +1,8 @@
 package learning.springframework.config;
 
 import learning.springframework.annotations.GuessCount;
-import learning.springframework.annotations.MinNumber;
 import learning.springframework.annotations.MaxNumber;
+import learning.springframework.annotations.MinNumber;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ComponentScan("learning.springframework")
+@ComponentScan(basePackages = "learning.springframework")
 @PropertySource("classpath:config/game.properties")
 public class GameConfig {
     // == fields ==
