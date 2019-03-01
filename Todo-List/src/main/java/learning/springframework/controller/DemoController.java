@@ -38,6 +38,6 @@ public class DemoController {
   // Model Attributes
   @ModelAttribute("welcomeMessage")
   public String welcomeMessage() {
-    return "Welcome to MAXIMUM RAWRING!";
+    return demoService.getWelcomeMessage();
   }
 }
