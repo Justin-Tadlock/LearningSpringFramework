@@ -7,11 +7,11 @@ public class DemoServiceImpl implements DemoService {
   
   @Override
   public String getHelloMessage(String user) {
-    return "Hello " + user;
+    return user;
   }
   
   @Override
   public String getWelcomeMessage() {
-    return "Welcome to Rawring";
+    return "Welcome to Stop Rawring";
   }
 }
