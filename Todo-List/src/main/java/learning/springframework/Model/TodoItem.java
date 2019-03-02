@@ -10,11 +10,11 @@ public class TodoItem {
   private int id;
   private String title;
   private String detail;
-  private LocalDate date;
+  private LocalDate deadline;
   
-  public TodoItem(String title, String detail, LocalDate date) {
+  public TodoItem(String title, String detail, LocalDate deadline) {
     this.title = title;
     this.detail = detail;
-    this.date = date;
+    this.deadline = deadline;
   }
 }
