@@ -11,16 +11,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 @Controller
 public class TodoItemController {
-  @ModelAttribute
-  public TodoData todoData() {
-    return todoItemService.getData();
-  }
   
   private final TodoItemServiceImpl todoItemService;
   
   @Autowired
   public TodoItemController(TodoItemServiceImpl todoItemService) {
     this.todoItemService = todoItemService;
+  }
+  
+  @ModelAttribute
+  public TodoData todoData() {
+    return todoItemService.getData();
   }
   
   @GetMapping(Mappings.ITEMS)
