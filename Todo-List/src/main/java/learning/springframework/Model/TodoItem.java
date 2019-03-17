@@ -9,12 +9,12 @@ import java.time.LocalDate;
 public class TodoItem {
   private int id;
   private String title;
-  private String detail;
+  private String details;
   private LocalDate deadline;
   
-  public TodoItem(String title, String detail, LocalDate deadline) {
+  public TodoItem(String title, String details, LocalDate deadline) {
     this.title = title;
-    this.detail = detail;
+    this.details = details;
     this.deadline = deadline;
   }
 }
