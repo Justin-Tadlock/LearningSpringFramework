@@ -11,6 +11,7 @@
         <module name="console" />
         <module name="Core" />
         <module name="core" />
+        <module name="web" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="console" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="web" options="-parameters" />
     </option>
   </component>
 </project>
