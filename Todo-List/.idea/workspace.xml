@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae0622c-a299-4152-96dd-17187288ad50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learning/springframework/controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learning/springframework/util/AttributeNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learning/springframework/util/GameMappings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/resources/templates/game-over.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/resources/templates/play.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Guess-The-Number-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Guess-The-Number-Game/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learn/springframework/GameService/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learn/springframework/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learn/springframework/GameService/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learn/springframework/service/GameServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learn/springframework/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learn/springframework/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learning/springframework/util/ViewNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Guess-The-Number-Game/web/src/main/java/learning/springframework/util/ViewNames.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
