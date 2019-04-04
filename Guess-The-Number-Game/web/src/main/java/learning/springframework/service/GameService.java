@@ -1,9 +1,9 @@
-package learn.springframework.GameService;
+package learning.springframework.service;
 
 public interface GameService {
     boolean isGameOver();
     String getMainMessage();
     String getResultMessage();
-    void checkGuess();
+    void checkGuess(int guess);
     void reset();
 }

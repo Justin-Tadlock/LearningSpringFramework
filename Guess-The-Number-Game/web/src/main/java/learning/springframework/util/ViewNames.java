@@ -1,4 +1,4 @@
-package learn.springframework.util;
+package learning.springframework.util;
 
 public final class ViewNames {
 

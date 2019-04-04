@@ -12,6 +12,7 @@
     <artifactId>web</artifactId>
 
     <dependencies>
+        <!-- Core -->
         <dependency>
             <groupId>learning.springframework</groupId>
             <artifactId>core</artifactId>

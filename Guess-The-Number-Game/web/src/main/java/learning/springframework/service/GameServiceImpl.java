@@ -1,4 +1,4 @@
-package learn.springframework.GameService;
+package learning.springframework.service;
 
 import learning.springframework.GameImpl;
 import learning.springframework.MessageGeneratorImpl;
@@ -12,14 +12,11 @@ import javax.annotation.PostConstruct;
 @Slf4j
 public class GameServiceImpl implements GameService {
 
-
-    @Autowired
     private final GameImpl game;
 
-    @Autowired
     private final MessageGeneratorImpl messageGenerator;
 
-
+    @Autowired
     public GameServiceImpl(GameImpl game, MessageGeneratorImpl messageGenerator) {
         this.game = game;
 
@@ -27,32 +24,35 @@ public class GameServiceImpl implements GameService {
     }
 
     @PostConstruct
-    void Init() {
-
+    private void init()
+    {
+        log.info("Initialized GameServiceImpl");
+        reset();
     }
 
     @Override
     public boolean isGameOver() {
-        return false;
+        return (game.isGameWon() || game.isGameLost());
     }
 
     @Override
     public String getMainMessage() {
-        return null;
+        return messageGenerator.getMainMessage();
     }
 
     @Override
     public String getResultMessage() {
-        return null;
+        return messageGenerator.getResultMessage();
     }
 
     @Override
-    public void checkGuess() {
-
+    public void checkGuess(int guess) {
+        game.setGuess(guess);
+        game.check();
     }
 
     @Override
     public void reset() {
-
+        game.reset();
     }
 }

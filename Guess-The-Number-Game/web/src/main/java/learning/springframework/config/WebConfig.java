@@ -1,6 +1,6 @@
-package learn.springframework.config;
+package learning.springframework.config;
 
-import learn.springframework.util.ViewNames;
+import learning.springframework.util.ViewNames;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
