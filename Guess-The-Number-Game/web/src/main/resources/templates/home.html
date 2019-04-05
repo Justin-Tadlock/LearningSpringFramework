@@ -8,7 +8,10 @@
     <div align="center">
         <h1>Welcome to the Guess the Number Game!</h1>
         <hr />
-        <a th:href="play" th:text="Play" />
+        <h3>
+            <a th:href="@{__${T(learning.springframework.util.GameMappings).PLAY}__}"
+               th:text="Play" />
+        </h3>
     </div>
 </body>
 </html>

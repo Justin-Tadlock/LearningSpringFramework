@@ -30,9 +30,25 @@ public class GameController {
         model.addAttribute(AttributeNames.MAIN_MESSAGE, gameService.getMainMessage());
         model.addAttribute(AttributeNames.RESULT_MESSAGE, gameService.getResultMessage());
         log.info("Model: {}", model);
-
+        
         return (gameService.isGameOver()) ? ViewNames.GAME_OVER : ViewNames.PLAY;
     }
+    
+    @GetMapping(GameMappings.RESTART)
+    public String restart(Model model) {
+      log.info("Restarting the game to play again.");
+      
+      gameService.reset();
+      
+      return GameMappings.REDIRECT_PLAY;
+    }
+  
+  @GetMapping(GameMappings.HOME)
+  public String home() {
+    gameService.reset();
+    
+    return ViewNames.HOME;
+  }
 
     @PostMapping(GameMappings.PLAY)
     public String processMessage(@RequestParam int guess)
@@ -43,4 +59,6 @@ public class GameController {
 
         return GameMappings.REDIRECT_PLAY;
     }
+    
+    
 }
